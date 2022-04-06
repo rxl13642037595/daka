@@ -1,6 +1,7 @@
 import os
 import time
-def dakawan():
+import random
+def daka():
     print(os.system('adb shell input keyevent 224'))
     time.sleep(3)
     print(os.system('adb shell input swipe 538 2313 559 1862'))
@@ -15,16 +16,7 @@ def dakawan():
     time.sleep(5)
     print(os.system('adb shell am force-stop com.alibaba.android.rimet'))
     pass
-
-def sleeptime(hour,min,sec):
-    print(hour*3600+min*60+sec)
-    return hour*3600+min*60+sec
-second1 = sleeptime(0,1,0)
-# second2 = sleeptime(0,1,0)
-# while 1==1:
-time.sleep(second1)
-dakawan()
-#    time.sleep(second2)
-#   dakazao()
-
-
+second = random.randint(0,60)
+print(second)
+time.sleep(second)
+daka()
